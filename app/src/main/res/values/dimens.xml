@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="longButtonWidth">237</dimen>
+    <dimen name="longButtonHeight">41</dimen>
+    <dimen name="buttonCorners">20dp</dimen>
+</resources>
