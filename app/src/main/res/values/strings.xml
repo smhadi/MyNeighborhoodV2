@@ -4,10 +4,20 @@
 
     <string name="already_registered"><u>Log in</u></string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="login">Login</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_account">Create Account</string>
+    <string name="title_activity_hope_page">HopePageActivity</string>
+    <string name="title_home">Home</string>
+    <string name="next">Next</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="email_password">Email and Password</string>
+    <string name="email">Email address</string>
+    <string name="terms_and_conditions">By clicking ‘Next’, you agree to our terms and conditions and privacy policy.</string>
+
 
 </resources>
 
