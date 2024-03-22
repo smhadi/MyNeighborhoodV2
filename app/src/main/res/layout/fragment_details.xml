@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/backButton"
         android:layout_width="20dp"
@@ -17,10 +16,10 @@
         />
 
     <TextView
-        android:id="@+id/textEmailandPwd"
+        android:id="@+id/textDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email_password"
+        android:text="@string/details"
         app:layout_constraintTop_toBottomOf="@id/backButton"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/h3Bold"
@@ -28,13 +27,13 @@
         android:layout_marginStart="26dp"
 
         />
-    
+
     <TextView
-        android:id="@+id/textEmail"
+        android:id="@+id/textFName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email"
-        app:layout_constraintTop_toBottomOf="@id/textEmailandPwd"
+        android:text="First Name"
+        app:layout_constraintTop_toBottomOf="@id/textDetails"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/h2Bold"
         android:layout_marginTop="20dp"
@@ -43,22 +42,22 @@
         />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editFName"
         android:layout_width="350dp"
         android:layout_height="43dp"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@id/textEmail"
-        app:layout_constraintTop_toBottomOf="@id/textEmail"
+        app:layout_constraintStart_toStartOf="@id/textFName"
+        app:layout_constraintTop_toBottomOf="@id/textFName"
         style="@style/editText"
+        android:inputType="text"
         />
 
 
     <TextView
-        android:id="@+id/textPassword"
+        android:id="@+id/textLName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
-        app:layout_constraintTop_toBottomOf="@id/editEmail"
+        android:text="Last Name"
+        app:layout_constraintTop_toBottomOf="@id/editFName"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/h2Bold"
         android:layout_marginTop="28dp"
@@ -67,48 +66,73 @@
         />
 
     <EditText
-        android:id="@+id/editPassword"
+        android:id="@+id/editLName"
         android:layout_width="350dp"
         android:layout_height="43dp"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@id/textPassword"
-        app:layout_constraintTop_toBottomOf="@id/textPassword"
+        app:layout_constraintStart_toStartOf="@id/textLName"
+        app:layout_constraintTop_toBottomOf="@id/textLName"
         style="@style/editText"
+        android:inputType="text"
         />
 
+
     <TextView
-        android:id="@+id/textConfirmPassword"
+        android:id="@+id/textGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/confirm_password"
-        app:layout_constraintTop_toBottomOf="@id/editPassword"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editLName"
+        app:layout_constraintStart_toStartOf="@id/editLName"
+        android:text="Select Your Gender"
+        android:layout_marginTop="30dp"
         style="@style/h2Bold"
-        android:layout_marginTop="28dp"
-        android:layout_marginStart="26dp"
-
         />
 
-    <EditText
-        android:id="@+id/editConfirmPassword"
-        android:layout_width="350dp"
-        android:layout_height="43dp"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@id/textConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@id/textConfirmPassword"
-        style="@style/editText"
-        />
-
-    <TextView
-        android:id="@+id/textTermsAndConditions"
-        android:layout_width="350dp"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/terms_and_conditions"
-        app:layout_constraintStart_toStartOf="@id/editConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@id/editConfirmPassword"
-        style="@style/h1Bold"
+        app:layout_constraintTop_toBottomOf="@id/textGender"
+        app:layout_constraintStart_toStartOf="@id/textGender"
         android:layout_marginTop="10dp"
-        />
+        >
+
+
+        <RadioButton
+            android:id="@+id/maleRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:checked="false"
+            android:text="Male"
+            android:textAlignment="center"
+            style="@style/h2"
+            />
+
+        <RadioButton
+            android:id="@+id/femaleRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:checked="false"
+            android:text="Female"
+            android:textAlignment="center"
+            style="@style/h2"
+            />
+
+        <RadioButton
+            android:id="@+id/otherRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:checked="false"
+            android:text="Other"
+            android:textAlignment="center"
+            style="@style/h2"
+            />
+
+
+    </RadioGroup>
+
 
     <ImageView
         android:id="@+id/dots"
@@ -117,7 +141,7 @@
         app:layout_constraintBottom_toTopOf="@id/nextButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/dots_two"
+        android:src="@drawable/dots_three"
         android:layout_marginBottom="20dp"
         />
 
@@ -135,7 +159,4 @@
         android:layout_marginBottom="30dp"
         android:paddingTop="10dp"
         />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

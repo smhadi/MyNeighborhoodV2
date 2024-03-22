@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lending_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myneighborhoodv2.fragments.lending.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"
+        />
+    <fragment
+        android:id="@+id/marketplaceFragment"
+        android:name="com.example.myneighborhoodv2.fragments.lending.MarketplaceFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_marketplace"
+        />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.myneighborhoodv2.fragments.lending.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart"
+        />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myneighborhoodv2.fragments.lending.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        />
+    <fragment
+        android:id="@+id/lendFragment"
+        android:name="com.example.myneighborhoodv2.fragments.lending.LendFragment"
+        android:label="LendFragment"
+        tools:layout="@layout/fragment_lend"
+        />
+</navigation>
