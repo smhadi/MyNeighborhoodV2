@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Base.Theme.MyNeighborhood" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorPrimaryVariant">@color/teal</item>
+        <item name="android:statusBarColor">@color/teal</item>
+    </style>
 
-    <style name="Theme.MyNeighborhoodV2" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.MyNeighborhoodV2" parent="Base.Theme.MyNeighborhood" />
+
+    <style name="Theme.MyNeighborhoodV2.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyNeighborhoodV2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyNeighborhoodV2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -141,7 +141,7 @@
         app:layout_constraintBottom_toTopOf="@id/nextButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/dots_three"
+        android:src="@drawable/dots_two"
         android:layout_marginBottom="20dp"
         />
 

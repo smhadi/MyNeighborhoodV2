@@ -21,6 +21,20 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="details">Tell us a bit about yourself</string>
+    <string name="home">Home</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="lend">Lend</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+
+    <string-array name="Neighborhoods">
+        <item>Hostel 1</item>
+        <item>Hostel 2</item>
+        <item>Hostel 3</item>
+        <item>Hostel 4</item>
+        <item>Hostel 5</item>
+        <item>Hostel 6</item>
+    </string-array>
 
 
 </resources>

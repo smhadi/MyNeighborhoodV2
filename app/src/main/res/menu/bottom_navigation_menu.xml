@@ -2,27 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item   android:title="Home"
+    <item   android:title="@string/home"
         android:icon="@drawable/home_button"
         android:id="@+id/homeFragment"
         />
 
-    <item   android:title="Marketplace"
+    <item   android:title="@string/marketplace"
         android:icon="@drawable/marketplace_button"
         android:id="@+id/marketplaceFragment"
         />
 
-    <item   android:title="Lend"
+    <item   android:title="@string/lend"
         android:icon="@drawable/lend_button"
         android:id="@+id/lendFragment"
         />
 
-    <item   android:title="Cart"
+    <item   android:title="@string/cart"
         android:icon="@drawable/cart_button"
         android:id="@+id/cartFragment"
+        
         />
 
-    <item   android:title="Profile"
+    <item   android:title="@string/profile"
         android:icon="@drawable/ic_profile"
         android:id="@+id/profileFragment"
         />
