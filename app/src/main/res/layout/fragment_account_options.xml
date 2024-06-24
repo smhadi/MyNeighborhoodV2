@@ -74,7 +74,7 @@
             android:layout_marginRight="35dp"
         android:layout_marginBottom="50dp"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <TextView
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

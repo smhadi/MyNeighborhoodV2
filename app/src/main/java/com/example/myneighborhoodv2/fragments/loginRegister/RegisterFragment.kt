@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.myneighborhoodv2.R
 import com.example.myneighborhoodv2.data.User
 import com.example.myneighborhoodv2.databinding.FragmentRegisterBinding
 import com.example.myneighborhoodv2.util.RegisterValidation
@@ -48,10 +50,9 @@ class RegisterFragment: Fragment () {
                 val result = "result"
                 setFragmentResult("requestKey", bundleOf("data" to result))
                 val user = User(
-                    editEmail.text.toString().trim()
-//                    FName.toString(),
-//                    LName.toString(),
-//                    gender.toString()
+                    editEmail.text.toString().trim(),
+                    editFName.text.toString().trim(),
+                    editLName.text.toString().trim()
                 )
                 val password = editPassword.text.toString()
                 val confirmPassword = editConfirmPassword.text.toString()
@@ -69,6 +70,8 @@ class RegisterFragment: Fragment () {
                     is Resource.Success -> {
                         Log.d("test", it.data.toString())
                         binding.nextButton.revertAnimation()
+                        findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+
 
                     }
 

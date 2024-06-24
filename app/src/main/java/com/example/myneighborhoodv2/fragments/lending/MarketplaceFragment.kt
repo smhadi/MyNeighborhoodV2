@@ -41,6 +41,7 @@ class MarketplaceFragment: Fragment(R.layout.fragment_marketplace){
             OtherFragment()
         )
 
+        binding.viewpagerMarketplace.isUserInputEnabled = false
 
         val viewPager2Adapter = MarketplaceViewpagerAdapter(categoriesFragments,childFragmentManager, lifecycle)
         binding.viewpagerMarketplace.adapter = viewPager2Adapter

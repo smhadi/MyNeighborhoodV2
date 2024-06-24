@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Circle Background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/teal"/> <!-- Background color of the circle -->
+            <size
+                android:width="56dp"
+                android:height="56dp"/>
+        </shape>
+    </item>
+
+    <!-- Plus Sign using Vector Drawable -->
+    <item android:drawable="@drawable/ic_plus_sign" android:gravity="center"/>
+</layer-list>

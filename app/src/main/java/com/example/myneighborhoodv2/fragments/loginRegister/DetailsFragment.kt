@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
-import androidx.navigation.fragment.findNavController
-import com.example.myneighborhoodv2.R
 import com.example.myneighborhoodv2.databinding.FragmentDetailsBinding
 
 class DetailsFragment: Fragment() {
@@ -31,7 +29,7 @@ class DetailsFragment: Fragment() {
                     editFName.text.toString().trim()
                 )
                 binding.nextButton.setOnClickListener {
-                    findNavController().navigate(R.id.action_detailsFragment_to_registerFragment)
+//                    findNavController().navigate(R.id.action_detailsFragment_to_registerFragment)
                 }
             }
 

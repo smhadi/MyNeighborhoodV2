@@ -1,5 +1,6 @@
-package com.example.myneighborhoodv2.fragments.categories
+package com.example.myneighborhoodv2.fragments.community
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,59 +12,57 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myneighborhoodv2.R
-import com.example.myneighborhoodv2.adapters.ProductsAdapter
-import com.example.myneighborhoodv2.databinding.FragmentMainCategoryBinding
+import com.example.myneighborhoodv2.adapters.BlogPostAdapter
+import com.example.myneighborhoodv2.databinding.FragmentBlogPostsBinding
 import com.example.myneighborhoodv2.util.Resource
-import com.example.myneighborhoodv2.viewmodel.MainCategoryViewModel
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.myneighborhoodv2.viewmodel.BlogPostViewModel
 import kotlinx.coroutines.flow.collectLatest
 
-private val TAG = "MainCategoryFragment"
+private val TAG = "BlogPostFragment"
 
-@AndroidEntryPoint
-class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
+class BlogPostFragment : Fragment(R.layout.fragment_blog_posts) {
 
-    private lateinit var binding: FragmentMainCategoryBinding
-    private lateinit var productsAdapter: ProductsAdapter
-    private val viewModel by viewModels<MainCategoryViewModel>()
+    private lateinit var binding: FragmentBlogPostsBinding
+    private lateinit var blogPostAdapter: BlogPostAdapter
+    private val viewModel by viewModels<BlogPostViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMainCategoryBinding.inflate(inflater)
+        binding = FragmentBlogPostsBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupProducts()
+        setupBlogPost()
 
 
-//        ProductsAdapter.onClick = {
+//        BlogPostAdapter.onClick = {
 //            val b = Bundle().apply { putParcelable("product",it) }
 //            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)
 //        }
 
 
         lifecycleScope.launchWhenStarted {
-            viewModel.Products.collectLatest {
+            viewModel.BlogPost.collectLatest {
                 when (it) {
                     is Resource.Loading -> {
-                        binding.productsProgressbar.visibility = View.VISIBLE
+                        binding.blogPostsProgressbar.visibility = View.VISIBLE
                     }
                     is Resource.Success -> {
-                        productsAdapter.differ.submitList(it.data)
-                        binding.productsProgressbar.visibility = View.GONE
+                        blogPostAdapter.differ.submitList(it.data)
+                        binding.blogPostsProgressbar.visibility = View.GONE
 
 
                     }
                     is Resource.Error -> {
                         Log.e(TAG, it.message.toString())
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-                        binding.productsProgressbar.visibility = View.GONE
+                        binding.blogPostsProgressbar.visibility = View.GONE
 
                     }
                     else -> Unit
@@ -71,30 +70,30 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
             }
         }
 
-//        binding.nestedScrollMainCategory.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, _ ->
+//        binding.nestedScrollHome.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, _ ->
 //            if (v.getChildAt(0).bottom <= v.height + scrollY) {
-//                viewModel.fetchProducts()
+//                viewModel.fetchBlogPost()
 //            }
 //        })
     }
 
-    private fun setupProducts() {
-        productsAdapter = ProductsAdapter()
-        binding.rvProducts.apply {
+    private fun setupBlogPost() {
+        blogPostAdapter = BlogPostAdapter()
+        binding.blogPostsRecyclerview.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-            adapter = productsAdapter
+            adapter = blogPostAdapter
         }
     }
 
 
 
     private fun hideLoading() {
-        binding.productsProgressbar.visibility = View.GONE
+        binding.blogPostsProgressbar.visibility = View.GONE
     }
 
     private fun showLoading() {
-        binding.productsProgressbar.visibility = View.VISIBLE
+        binding.blogPostsProgressbar.visibility = View.VISIBLE
 
     }
 
@@ -106,3 +105,6 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
 //    }
 
 }
+
+
+

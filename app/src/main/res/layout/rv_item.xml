@@ -22,6 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="10dp"
+            android:src="@drawable/dots_three"
 
              />
 
@@ -29,7 +30,7 @@
             android:id="@+id/tv_ad_name"
             android:layout_width="wrap_content"
             android:maxWidth="250dp"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:text="Black Fixed Gear Bike"
             app:layout_constraintStart_toStartOf="@id/img_ad"
             app:layout_constraintTop_toBottomOf="@id/img_ad"

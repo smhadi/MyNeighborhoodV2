@@ -32,12 +32,10 @@
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
 
-<!--        <action-->
-<!--            android:id="@+id/action_loginFragment_to_neighborhoodFragment"-->
-<!--            app:destination="@id/neighborhoodFragment" />-->
+
         <action
-            android:id="@+id/action_loginFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/neighborhoodFragment"-->
@@ -52,18 +50,6 @@
 <!--            app:destination="@id/loginFragment" />-->
 <!--    </fragment>-->
     <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.example.myneighborhoodv2.fragments.loginRegister.DetailsFragment"
-        android:label="DetailsFragment"
-        tools:layout="@layout/fragment_details">
-        <action
-            android:id="@+id/action_detailsFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-<!--        <action-->
-<!--            android:id="@+id/action_detailsFragment_to_neighborhoodFragment"-->
-<!--            app:destination="@id/neighborhoodFragment" />-->
-    </fragment>
-    <fragment
         android:id="@+id/accountOptionFragment"
         android:name="com.example.myneighborhoodv2.fragments.loginRegister.AccountOptionFragment"
         android:label="AccountOptionFragment"
@@ -71,14 +57,9 @@
         <action
             android:id="@+id/action_accountOptionFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+
         <action
-            android:id="@+id/action_accountOptionFragment_to_detailsFragment2"
-            app:destination="@id/detailsFragment" />
-        <!--        <action-->
-<!--            android:id="@+id/action_accountOptionFragment_to_neighborhoodFragment"-->
-<!--            app:destination="@id/neighborhoodFragment" />-->
-        <action
-            android:id="@+id/action_accountOptionFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_accountOptionFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
 </navigation>

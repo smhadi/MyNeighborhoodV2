@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.myneighborhoodv2"
-        minSdk 24
+        minSdk 28
         //noinspection OldTargetApi
         targetSdk 34
         versionCode 1
@@ -73,8 +73,10 @@ dependencies {
     implementation platform('androidx.compose:compose-bom:2022.10.00')
     //noinspection GradleDynamicVersion
     implementation 'androidx.core:core-ktx:+'
-    implementation 'com.android.car.ui:car-ui-lib:2.0.0'
+    implementation 'com.android.car.ui:car-ui-lib:2.6.0'
     implementation 'com.google.firebase:firebase-firestore:24.11.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.3.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.3.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -84,7 +86,8 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
-    apply plugin :"kotlin-kapt"
+    apply plugin: 'kotlin-kapt'
+    
 
     //Navigation component
     def nav_version = "2.5.2"
@@ -116,9 +119,7 @@ dependencies {
     kapt 'com.google.dagger:hilt-compiler:2.48'
 
 
-    //Firebase
-    implementation 'com.google.firebase:firebase-auth:22.3.1'
 
-    //Coroutines with firebase
+
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
 }

@@ -29,7 +29,7 @@ class AccountOptionFragment: Fragment (R.layout.fragment_account_options) {
         }
 
         binding.joinButton.setOnClickListener {
-            findNavController().navigate(R.id.action_accountOptionFragment_to_detailsFragment)
+            findNavController().navigate(R.id.action_accountOptionFragment_to_registerFragment)
         }
     }
 }
